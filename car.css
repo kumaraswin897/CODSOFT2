@@ -1,0 +1,233 @@
+*
+{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    cursor:pointer;
+    
+}
+body{
+    width:100%;
+    min-height:100vh;
+    background: black;
+    overflow: hidden;
+}
+header{
+    display:flex;
+    padding:15px 20px;
+    justify-content: space-between;
+    color:white;  
+    animation:header 3s ease-in-out;
+    
+}
+@keyframes header{
+    0%{
+        transform:translateY(-100%);
+    }
+}
+nav li{
+   list-style-type: none;
+   display: inline-block;
+   margin:15px 10px;
+   font-weight: 700;
+}
+nav li a{
+    text-decoration: none;
+    color:white;
+}
+nav li a:hover{
+    color:violet;
+    background-color:lightyellow;
+    border-radius: 8px;
+}
+.container
+{
+    width:100%;
+    display:flex;  
+}
+.home
+{
+    width:50%;
+    color:white;
+    margin-top:7%;
+    margin-left:5%;
+    overflow: hidden;
+    animation: home 2s ease-in-out;
+}
+@keyframes home{
+    0%{
+        opacity: 0;/*which is used to hide the content for 2sec*/
+        transform: translateX(-50%);
+    }
+}
+.home h1{
+    font-size: 30px;
+    margin-bottom: 1%;
+    letter-spacing: 8px;
+}
+.home h3{
+    margin-bottom: 3%;  
+    font-size:25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+span{
+    color:yellow;
+}
+.home p{
+    font-size: 20px;
+    margin-bottom: 3%;   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+    padding:10px 10px;
+    background: transparent;
+    color:#fefefe;
+    border-radius: 12px;
+}
+button:hover{
+    background-color: red;
+}
+.pict
+{
+    width:50%;
+    margin-top: 8%;
+    z-index: -1;
+
+}
+img{
+    width:40rem;/*range being exceeds 1200,it change 40rem size */
+    animation:car 5s ease-in-out;
+}
+@keyframes car {
+    0%{
+        transform:translateX(100%)/*it's look like a appear come from outside*/
+    }
+    100%{
+        transform: translatex(-220%);
+    }
+
+}
+@media screen and (max-width:1200px)/*range being within 1200 */
+{
+    .home
+    {
+        width:100%;
+        text-align: center;
+    }
+    .pict{
+        width:100%;
+        position:absolute;
+        bottom:-5%;
+        display:flex;
+        justify-content: center;
+
+    }
+    img {
+        width:20rem;
+    };
+}
+@media screen and (max-width:576px)/*smaller device */
+{
+    .home
+    {
+        width:100%;
+        text-align: center;
+    }
+    .home h1,h3,p
+    {
+        margin-bottom: 5%;
+    }
+   
+    .pict{
+        width:100%;
+        position:absolute;
+        bottom:-5%;
+        display:flex;
+        justify-content: center;
+
+    }
+    img {
+        width:10rem;
+    };
+}
+#about
+{
+    width:100%;
+    height:100px;
+    background-color: aqua;
+    display: flex;
+}
+.ab1
+{
+    width:33%;
+    height:100px;
+    background-color: yellow;
+    padding-left:10px;
+    font-size: 16px;
+    transition: transform 0.5s ease-in-out;
+    
+    
+}
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);/*0% and 100% define the initial and final positions (no movement).
+        /* 50% defines the mid-point where the div moves up by 10 pixels. */
+        
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.ab1:hover {
+    animation: moveUpDown 0.5s ease-in-out infinite;
+}
+.ab1:hover{
+    cursor:pointer;
+}
+.ab2
+{
+    background-color: red;
+    width:33%;
+    height:100px;
+    padding-left:10px;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: transform 0.5s ease-in-out;
+}
+.ab2:hover {
+    animation: moveUpDown 0.5s ease-in-out infinite;
+}
+.ab3
+{   background-color: pink;
+    width:34%;
+    height:100px;
+    padding-left:10px;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: transform 0.5s ease-in-out;
+}
+.ab3:hover {
+    animation: moveUpDown 0.5s ease-in-out infinite;
+}
+.abo
+{
+    width:100%;
+    height:25px;
+    border:1px solid white;  
+}
+
+#features
+{
+    width:100%;
+    height:300px;
+    background-color:brown;
+}
+#about p{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+#features p{
+    font-size: 20px;
+    font-family: sans-serif;
+}
